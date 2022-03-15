@@ -16,6 +16,8 @@
 		04D63B7A27D7C33500E9C659 /* QRapplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D63B7927D7C33500E9C659 /* QRapplicationTests.swift */; };
 		04D63B8427D7C33500E9C659 /* QRapplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D63B8327D7C33500E9C659 /* QRapplicationUITests.swift */; };
 		04D63B8627D7C33500E9C659 /* QRapplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D63B8527D7C33500E9C659 /* QRapplicationUITestsLaunchTests.swift */; };
+		04F3324527E134B300F52C8B /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3324427E134B300F52C8B /* QRScannerViewController.swift */; };
+		04F3324727E138F300F52C8B /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3324627E138F300F52C8B /* QRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		04D63B7F27D7C33500E9C659 /* QRapplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRapplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D63B8327D7C33500E9C659 /* QRapplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRapplicationUITests.swift; sourceTree = "<group>"; };
 		04D63B8527D7C33500E9C659 /* QRapplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRapplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04F3324427E134B300F52C8B /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		04F3324627E138F300F52C8B /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				04D63B6B27D7C33500E9C659 /* Assets.xcassets */,
 				04D63B6D27D7C33500E9C659 /* LaunchScreen.storyboard */,
 				04D63B7027D7C33500E9C659 /* Info.plist */,
+				04F3324427E134B300F52C8B /* QRScannerViewController.swift */,
+				04F3324627E138F300F52C8B /* QRViewController.swift */,
 			);
 			path = QRapplication;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F3324527E134B300F52C8B /* QRScannerViewController.swift in Sources */,
+				04F3324727E138F300F52C8B /* QRViewController.swift in Sources */,
 				04D63B6727D7C33300E9C659 /* ViewController.swift in Sources */,
 				04D63B6327D7C33300E9C659 /* AppDelegate.swift in Sources */,
 				04D63B6527D7C33300E9C659 /* SceneDelegate.swift in Sources */,
@@ -447,6 +455,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +484,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

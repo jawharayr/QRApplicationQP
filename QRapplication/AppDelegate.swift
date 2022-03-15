@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  QRapplication
+//  QRCodeApp
 //
-//  Created by MAC on 05/08/1443 AH.
-//
+
 
 import UIKit
 
