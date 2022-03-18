@@ -6,8 +6,14 @@
 
 import UIKit
 import AVFoundation
+import FirebaseDatabase
+import Firebase
+import FirebaseStorage
 
 class QRScannerViewController: UIViewController {
+    var firebaseDatabaseReference = Database.database().reference()
+   // let storageRef = Storage.storage().reference()
+    var ref:DatabaseReference!
     
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -32,6 +38,7 @@ class QRScannerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
         // Get the back-facing camera for capturing videos
         guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
@@ -102,10 +109,50 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
-            
             if metadataObj.stringValue != nil {
+                let QRnumber = metadataObj.stringValue ?? ""
+                    let ref = ref.child("QRCode")
+                ref.getData { [self] (error, snapshot) in
+                        print("snapshot \(snapshot.value as Any)")
+                        if let value = snapshot.value as? [String: Any] {
+                            for key in value.keys {
+                                if key == QRnumber {
+                                    self.messageLabel.text = "Succefully Scanned"
+                                    self.ref.child("QRCode").child(QRnumber).child("isScanned").setValue(true)
+                             
+                                    break
+                                }
+                            }
+                        } else {
+                            self.messageLabel.text = "data not exisit"
+                        
+                        }
+                        
+                    }
+                }
+           /* if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
-            }
-        }
+                let QRnumber = metadataObj.stringValue ?? ""
+                let QRname = ref.child("QRCode")
+                QRname.observe(.value, with: { [self] snapshot in
+                    let detected = snapshot.key as? String // Keys are always strings
+            let isScanned = snapshot.childSnapshot(forPath: "isScanned").value as? Bool
+                    if Int(detected!) == Int(QRnumber){
+                            print(isScanned)
+                            self.messageLabel.text = "successfuly scanned"
+                        }
+                            
+                   else{
+                       messageLabel.text = "not valid QR"
+
+                   }
+            
     }
+             )  }*/
+                               }
 }
+ }
+                              // if Int(detected!) == Int(QRnumber){
+                                 // print(isScanned)
+                                //  self.messageLabel.text = "successfuly scanned"
+                            //  }
