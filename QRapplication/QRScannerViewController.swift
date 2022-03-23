@@ -119,6 +119,7 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
                                 if key == QRnumber {
                                     self.messageLabel.text = "Succefully Scanned"
                                     self.ref.child("QRCode").child(QRnumber).child("isScanned").setValue(true)
+                                    print("Scanned successfully")
                              
                                     break
                                 }

@@ -12,42 +12,46 @@
         <!--Code View Controller-->
         <scene sceneID="7e2-Zo-ldx">
             <objects>
-                <viewController id="IWh-D7-f3t" customClass="QRCodeViewController" customModule="QRCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IWh-D7-f3t" customClass="QRCodeViewController" customModule="QRapplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q0f-2I-vsL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1b-rl-i85">
-                                <rect key="frame" x="82.5" y="94" width="249" height="72"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-cV-ckd">
-                                <rect key="frame" x="82" y="306" width="254" height="250"/>
+                                <rect key="frame" x="108" y="331" width="198" height="191"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="0Ei-BZ-WDL"/>
-                                    <constraint firstAttribute="height" constant="250" id="QzB-w6-gsl"/>
-                                    <constraint firstAttribute="width" constant="254" id="iCF-Hc-tUQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="0Ei-BZ-WDL"/>
+                                    <constraint firstAttribute="height" constant="191" id="QzB-w6-gsl"/>
+                                    <constraint firstAttribute="width" constant="198" id="iCF-Hc-tUQ"/>
                                 </constraints>
                                 <state key="normal" image="logo"/>
                                 <connections>
                                     <segue destination="Qyi-l9-UPE" kind="presentation" id="BJ3-DT-BKf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNs-T7-Xxj">
+                                <rect key="frame" x="92" y="530" width="229" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dVM-Py-1Lh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E7x-nm-uGv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tUY-cV-ckd" firstAttribute="leading" secondItem="E7x-nm-uGv" secondAttribute="leading" constant="82" id="6XT-b5-JEE"/>
-                            <constraint firstItem="E7x-nm-uGv" firstAttribute="trailing" secondItem="tUY-cV-ckd" secondAttribute="trailing" constant="78" id="LF0-B7-jTp"/>
-                            <constraint firstItem="E7x-nm-uGv" firstAttribute="bottom" secondItem="tUY-cV-ckd" secondAttribute="bottom" constant="306" id="MkT-Ed-Oab"/>
-                            <constraint firstItem="tUY-cV-ckd" firstAttribute="leading" secondItem="E7x-nm-uGv" secondAttribute="leading" constant="82" id="Mwx-M5-1bc"/>
-                            <constraint firstItem="e1b-rl-i85" firstAttribute="top" secondItem="E7x-nm-uGv" secondAttribute="top" constant="50" id="NyS-m1-SaS"/>
-                            <constraint firstItem="E7x-nm-uGv" firstAttribute="bottom" secondItem="tUY-cV-ckd" secondAttribute="bottom" constant="306" id="Q7A-4Z-lz5"/>
-                            <constraint firstItem="tUY-cV-ckd" firstAttribute="top" secondItem="e1b-rl-i85" secondAttribute="bottom" constant="140" id="dmU-0s-3uc"/>
-                            <constraint firstItem="e1b-rl-i85" firstAttribute="centerX" secondItem="E7x-nm-uGv" secondAttribute="centerX" id="gS9-IF-9tq"/>
-                            <constraint firstItem="E7x-nm-uGv" firstAttribute="trailing" secondItem="tUY-cV-ckd" secondAttribute="trailing" constant="78" id="oVq-BL-Lrg"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="trailing" secondItem="JNs-T7-Xxj" secondAttribute="trailing" constant="93" id="1g5-Jb-oDp"/>
+                            <constraint firstItem="tUY-cV-ckd" firstAttribute="leading" secondItem="E7x-nm-uGv" secondAttribute="leading" constant="108" id="6XT-b5-JEE"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="trailing" secondItem="tUY-cV-ckd" secondAttribute="trailing" constant="108" id="LF0-B7-jTp"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="bottom" secondItem="tUY-cV-ckd" secondAttribute="bottom" constant="340" id="MkT-Ed-Oab"/>
+                            <constraint firstItem="tUY-cV-ckd" firstAttribute="leading" secondItem="E7x-nm-uGv" secondAttribute="leading" constant="108" id="Mwx-M5-1bc"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="bottom" secondItem="tUY-cV-ckd" secondAttribute="bottom" constant="340" id="Q7A-4Z-lz5"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="bottom" secondItem="JNs-T7-Xxj" secondAttribute="bottom" constant="299" id="Tu5-5a-mOP"/>
+                            <constraint firstItem="E7x-nm-uGv" firstAttribute="trailing" secondItem="tUY-cV-ckd" secondAttribute="trailing" constant="108" id="oVq-BL-Lrg"/>
+                            <constraint firstItem="JNs-T7-Xxj" firstAttribute="leading" secondItem="E7x-nm-uGv" secondAttribute="leading" constant="92" id="ucw-bu-hSN"/>
+                            <constraint firstItem="JNs-T7-Xxj" firstAttribute="top" secondItem="tUY-cV-ckd" secondAttribute="bottom" constant="8" symbolic="YES" id="yMW-5P-VvD"/>
                         </constraints>
                     </view>
                 </viewController>
